@@ -4,5 +4,6 @@
 ```bash
 $ python GenerateQualimap_report.py -d <Qualimap folder>
 ```
-**3. Find TSS of gene from USCS refGene**
-This example shown in the script `find_TSS_of_gene.sh` is for zebrafish but can be implemented for other organism.
+
+**3. `find_TSS_of_gene.sh` Extract TSS of gene from USCS refGene**
+The example shown in the script  is for zebrafish but can be implemented for other organism.
