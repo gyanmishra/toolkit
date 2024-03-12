@@ -14,4 +14,4 @@ $ python GenerateQualimap_report.py -d <qc_qualimap>
 **3. `find_TSS_of_gene.sh` Extract TSS of gene from USCS refGene**
 The example shown in the script  is for zebrafish but can be implemented for other organism.
 
-**4. [Converting mouse to human gene names and vice versa with biomaRt package](https://www.r-bloggers.com/2016/10/converting-mouse-to-human-gene-names-with-biomart-package/)
+**4. [Converting mouse to human gene names and vice versa with biomaRt package](https://www.r-bloggers.com/2016/10/converting-mouse-to-human-gene-names-with-biomart-package/)**
