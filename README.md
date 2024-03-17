@@ -15,3 +15,14 @@ $ python GenerateQualimap_report.py -d <qc_qualimap>
 The example shown in the script  is for zebrafish but can be implemented for other organism.
 
 **4. [Converting mouse to human gene names and vice versa with biomaRt package](https://www.r-bloggers.com/2016/10/converting-mouse-to-human-gene-names-with-biomart-package/)**
+
+**5. Attach R version of conda environment to jupyter notebook.**
+```bash
+#Install nb_conda_kernels in the conda environment where jupyter is installed.
+$ conda activate name_of_environment
+$ conda install nb_conda_kernels
+# Install IRkernel package in R
+install.packages('IRkernel')
+$ Rscript -e \ 'IRkernel::installspec(name="ir33",displayname="R 3.6.1")'
+```
+
