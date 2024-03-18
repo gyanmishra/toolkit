@@ -20,10 +20,10 @@ The example shown in the script  is for zebrafish but can be implemented for oth
 **5. Attach R version of conda environment to jupyter notebook.**
 ```bash
 #Install nb_conda_kernels in the conda environment where jupyter is installed.
-$ conda activate name_of_environment
+$ conda activate environment_name
 $ conda install nb_conda_kernels
 # Install IRkernel package in R
 install.packages('IRkernel')
-$ Rscript -e \ 'IRkernel::installspec(name="ir33",displayname="R 3.6.1")'
+$ Rscript -e 'IRkernel::installspec(name="ir33",displayname="R 3.6.1")'
 ```
 
