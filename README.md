@@ -27,7 +27,7 @@ install.packages('IRkernel')
 $ Rscript -e 'IRkernel::installspec(name="ir33",displayname="R 3.6.1")'
 ```
 
-**5. [GenometriCorr](https://genometricorr.sourceforge.net/install.html) : R package to test association of two sets of GRanges.
+**6. [GenometriCorr](https://genometricorr.sourceforge.net/install.html) : R package to test association of two sets of GRanges.**
 
-**6. [Monte Carlo Simulation to test significance of correlation](https://davidzeleny.net/wiki/doku.php/recol:monte-carlo-pearson)
+**7. [Monte Carlo Simulation to test significance of correlation](https://davidzeleny.net/wiki/doku.php/recol:monte-carlo-pearson)**
 
