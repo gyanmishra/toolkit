@@ -31,3 +31,54 @@ $ Rscript -e 'IRkernel::installspec(name="ir33",displayname="R 3.6.1")'
 
 **7. [Monte Carlo Simulation to test significance of correlation](https://davidzeleny.net/wiki/doku.php/recol:monte-carlo-pearson)**
 
+**8. `download_GEOmetadata.py`**
+\
+required python modules : GEOparse, Bio 
+\
+required tools : [NCBI SRA Toolkit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
+```
+usage: download_GEOmetadata.py [-h] -GEO GEOACCESSION -GSM GSMID [-d OUTDIR] -e ENTREZEMAIL -key ENTREZKEY
+
+A script to download SRA fles and metadata from GEO accession number
+
+options:
+  -h, --help            show this help message and exit
+  -GEO GEOACCESSION, --GEOaccession GEOACCESSION
+                        GEO Accession required
+  -GSM GSMID, --GSMid GSMID
+                        default: "All"; GSM id (e.g) "GSM4297142,GSM4297143"
+  -d OUTDIR, --outDir OUTDIR
+                        Enter directory to downlod SRA files (optional)
+  -e ENTREZEMAIL, --EntrezEmail ENTREZEMAIL
+                        Enter Entrez email id
+  -key ENTREZKEY, --EntrezKey ENTREZKEY
+                        Enter Entrez key
+```
+e.g
+```
+$ python download_GEOmetadata.py -GEO "GSE144825" -GSM "GSM4297142,GSM4297154"
+```
+output : 
+\
+`data.csv`
+\
+if the script run with option -GEO and -GSM
+```
+SampleName,GSM_ID,SRA_ID,Organism
+bulk_iPSC_P25_H21792,GSM4297142,SRR11033913,Homo sapiens
+bulk_iPSC_P19_Hy1-30,GSM4297154,SRR11033925,"Pan troglodytes;Homo sapiens"
+```
+if the script run with option -GEO, -GSM and -d
+\
+if downloaded data is single-end
+```
+SampleName,GSM_ID,SRA_ID,Organism,Read_1
+bulk_iPSC_P25_H21792,GSM4297142,SRR11033913,Homo sapiens,SRR11033913.fastq.gz
+bulk_iPSC_P19_Hy1-30,GSM4297154,SRR11033925,Pan troglodytes;Homo sapiens,SRR11033925.fastq.gz
+```
+if downloaded data is paired-end
+```
+SampleName,GSM_ID,SRA_ID,Organism,Read_1,Read_2
+bulk_iPSC_P25_H21792,GSM4297142,SRR11033913,Homo sapiens,SRR11033913_1.fastq.gz,SRR11033913_2.fastq.gz
+bulk_iPSC_P19_Hy1-30,GSM4297154,SRR11033925,Pan troglodytes;Homo sapiens,SRR11033925_1.fastq.gz,SRR11033925_2.fastq.gz
+
